@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat-Regular';
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.full-screen {
+    min-height: 100vh;
+    padding: 16px;
+    background: white;
+}
+
+.slide {
+    position: relative;
+}
+
+#basic-information {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#basic-information .half {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#basic-information .image-area {
+    margin-right: 16px;
+    justify-content: flex-end;
+}
+
+.image-area img {
+    /* flex: 1 1; */
+    /* max-width: 512px; */
+    /* height: auto; */
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#basic-information .information-area {
+    flex: 1 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.information-area .details-area {
+    margin-bottom: 32px;
+}
+
+.details-area .name {
+    font-size: 3rem;
+}
+
+.details-area .degree {
+    font-size: 2rem;
+}
+
+.information-area .contact-area p {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.contact-area .info-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.15rem;
+}
+
+.info-row .icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+}
+
+@media (max-width: 800px) {
+    #basic-information {
+        flex-direction: column;
+    }
+    #basic-information .image-area {
+        justify-content: center;
+        margin: 0px;
+    }
+    #basic-information .information-area {
+        justify-content: flex-start;
+    }
+    .image-area img {
+        width: 200px;
+    }
+    .information-area .details-area {
+        margin-bottom: 16px;
+    }
+    .details-area .name {
+        font-size: 2rem;
+    }
+    .details-area .degree {
+        font-size: 1.5rem;
+    }
+    .information-area .contact-area p {
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+}
