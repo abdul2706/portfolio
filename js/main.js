@@ -1,39 +1,30 @@
-var TAG = '[main]';
+var TAG = "[main]";
 var clog = console.log;
-var prevScroll = 0;
-var nextScroll = 0;
-var windowHeight = 0;
-var slide_no = 0;
 var total_sections = 0;
+var education_slide_id = 0;
+var total_slides = 3;
 
-$(function() {
-    clog(TAG + '[starts]');
-    total_sections = $('section.slide').length;
+$(function () {
+    clog(TAG + "[starts]");
+    total_sections = $("section.slide").length;
     clog(total_sections);
-    windowHeight = window.innerHeight;
-    clog(TAG + windowHeight);
-    // $(window).on('scroll', function() {
-    //     clog('[window.scroll][starts]');
-    //     nextScroll = window.scrollY;
-
-    //     for (var i = 0; i < total_sections; i++) {
-    //         if (nextScroll >= i * windowHeight && nextScroll < (i + 1) * windowHeight) {
-    //             slide_no = i;
-    //         }
-    //     }
-
-    //     clog(nextScroll + '; ' + slide_no);
-
-    //     for (var i = 0; i < total_sections; i++) {
-    //         if (i <= slide_no) {
-    //             $('section[slide_no=' + i + ']').css('top', nextScroll);
-    //         }
-    //         //  else {
-    //         //     $('section[slide_no=' + i + ']').removeClass('fixed-slide');
-    //         // }
-    //     }
-    //     prevScroll = nextScroll;
-    //     clog('[window.scroll][ends]');
-    // });
-    clog(TAG + '[ends]');
+    $(".slider-button").click(function () {
+        clog("[slider-button][clicked]");
+        let type = $(this).attr("type");
+        let slide_item = $(this).siblings(".current-item");
+        clog(type);
+        current_slide_id = $(slide_item).attr("item-id");
+        if (type == "left") {
+            new_slide_id = (current_slide_id - 1) % total_slides;
+        } else if (type == "right") {
+            new_slide_id = (current_slide_id + 1) % total_slides;
+        }
+        if (new_slide_id < 0) {
+            new_slide_id += total_slides;
+        }
+        clog(current_slide_id, new_slide_id);
+        $(slide_item).removeClass("current-item");
+        $(`.slider-item[item-id=${new_slide_id}]`).addClass("current-item");
+    });
+    clog(TAG + "[ends]");
 });
