@@ -25,6 +25,7 @@ a:hover {
 
 img {
     width: 128px;
+    height: 128px;
 }
 
 ul {
@@ -81,6 +82,111 @@ li {
 
 #skills .para-style-1, #skills .para-style-2 {
     text-align: center;
+}
+
+.container-full-screen {
+    width: 100%;
+    height: 100vh;
+    background: #282a36;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-full-screen .container-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-full-screen .container-info #my-image {
+    width: 256px;
+    height: 256px;
+    border-radius: 100%;
+}
+
+.container-full-screen .container-info .main-info {
+    /* -webkit-animation: huerotate 4s linear infinite;
+    animation: huerotate 4s linear infinite; */
+    background: -webkit-gradient(linear, left top, right top, from(cyan), to(orange));
+    background: -o-linear-gradient(left, cyan, orange);
+    background: linear-gradient(to right, cyan, orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+
+/* @keyframes huerotate {
+    0% {
+        background: -webkit-gradient(linear, left top, right top, from(cyan), to(orange));
+        background: -o-linear-gradient(left, cyan, orange);
+        background: linear-gradient(to right, cyan, orange);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: -webkit-gradient(linear, right bottom, right top, from(cyan), to(orange));
+        background: -o-linear-gradient(right, cyan, orange);
+        background: linear-gradient(to left, cyan, orange);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+} */
+
+.container-full-screen .container-info .main-info h1 {
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-full-screen .container-info .main-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.container-full-screen .links-info .icon {
+    width: 64px;
+    height: 64px;
+    margin: 32px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0%;
+    margin-left: -100px;
+}
+
+/* .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+} */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 .container-full-width {
