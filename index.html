@@ -6,72 +6,284 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Abdul Rehman Khan</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery331min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        img {
+            width: 128px;
+            height: auto;
+        }
+        
+        div {
+            border: 1px solid black;
+        }
+    </style> -->
 </head>
 
 <body>
-    <section id="basic-information" class="full-screen slide" slide_no='0'>
+    <section id="basic-information" class="full-screen">
         <div class="image-area half">
-            <img src="images/Abdul Rehman Khan.png" alt="My Image">
+            <img src="images/Abdul Rehman Khan.png" alt="My Photo">
         </div>
         <div class="information-area half">
             <div class="details-area">
-                <h1 class="name">Abdul Rehman <span class="special1">Khan</span></h1>
+                <h1 class="name"><span class="special1">Abdul Rehman</span> Khan</h1>
                 <h3 class="degree">Bachelor's Student</h3>
-                <!-- <p class="university">Currently doing Bachelors in Computer & Information Sciences from <a href="http://www.pieas.edu.pk/" class="special1">Pakistan Institute of Engineering & Applied Sciences (PIEAS)</a></p> -->
             </div>
             <div class="contact-area">
                 <div class="info-row">
-                    <img class="icon" src="images/contact.png" alt="Contact">
-                    <span>+923311205526</span>
-                </div>
-                <div class="info-row">
                     <img class="icon" src="images/gmail.png" alt="Email">
-                    <span>abdulrehmankhan27061998@gmail.com</span>
+                    <span><a href="mailto:abdulrehmankhan27061998@gmail.com">abdulrehmankhan27061998@gmail.com</a></span>
                 </div>
                 <div class="info-row">
                     <img class="icon" src="images/github.png" alt="GitHub">
-                    <span>github.com/abdulkhan2706</span>
+                    <span><a href="https://www.github.com/abdulkhan2706" target="_blank">github.com/abdulkhan2706</a></span>
                 </div>
                 <div class="info-row">
                     <img class="icon" src="images/linkedin.png" alt="LinkedIn">
-                    <span>linkedin.com/in/abdulrehman2706/</span>
+                    <span><a href="https://www.linkedin.com/in/abdulrehman2706/" target="_blank">linkedin.com/in/abdulrehman2706/</a></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="full-screen slide" slide_no='1'>
+    <!-- <hr> -->
+
+    <section id="education" class="full-screen">
+        <h1 class="heading">Education</h1>
+        <div class="container">
+            <div id="bachelors" class="card">
+                <div class="information">
+                    <p class="degree"><span class="special2">Degree:</span> Bachelors In Computer & Information Sciences</p>
+                    <p class="institution"><span class="special2">Institution:</span> Pakistan Institute of Engineering & Applied Sciences, Islamabad</p>
+                    <p class="year"><span class="special2">From:</span> September, 2017</p>
+                    <p class="year"><span class="special2">To:</span> June, 2021 (Expected)</p>
+                    <p class="year"><span class="special2">CGPA:</span> 3.89 / 4.00</p>
+                </div>
+                <div class="logo">
+                    <img src="images/University-01.png" alt="University Logo">
+                </div>
+            </div>
+            <div id="intermediate" class="card">
+                <div class="information">
+                    <p class="degree"><span class="special2">Degree:</span> Intermediate in Pre-Engineering</p>
+                    <p class="institution"><span class="special2">Institution:</span> Punjab College of Science, G.T. Road, Gujranwala</p>
+                    <p class="year"><span class="special2">From:</span> September, 2015</p>
+                    <p class="year"><span class="special2">To:</span> June, 2017</p>
+                    <p class="year"><span class="special2">Marks:</span> 1023 / 1100</p>
+                </div>
+                <div class="logo">
+                    <img src="images/College.png" alt="College Logo">
+                </div>
+            </div>
+            <div id="matriculation" class="card">
+                <div class="information">
+                    <p class="degree"><span class="special2">Degree:</span> Matriculation in Computer Science</p>
+                    <p class="institution"><span class="special2">Institution:</span> St. Josephs' English High School, Sialkot Road, Gujranwala</p>
+                    <p class="year"><span class="special2">From:</span> September, 2013</p>
+                    <p class="year"><span class="special2">To:</span> June, 2015</p>
+                    <p class="year"><span class="special2">Marks:</span> 991 / 1100</p>
+                </div>
+                <div class="logo">
+                    <img src="images/School.png" alt="School Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="full-screen">
+        <h1 class="heading">Experience</h1>
+        <div class="container">
+            <div class="card">
+                <p class="title">Summer Internship</p>
+                <p class="organization">Pakistan Institute of Nuclear Science & Technology (PINSTECH)</p>
+                <p class="location">Islamabad</p>
+                <p class="dates">July 2020 - August 2020</p>
+                <p class="description">Completed Summer Internship at PINSTECH. Analyzed network logs using Apache Hadoop and Python. Trained ML model to predict timings for next attack.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="full-screen">
+        <h1 class="heading">Achievements</h1>
+        <div class="container">
+            <div class="card">
+                <p class="title">Among Top 25 in NPTC, 2017</p>
+                <p class="organization">National Physics Talent Contest</p>
+                <p class="description">Participated in National Physics Talent Contest and joined training camp for International Physics Olympiad (IPhO).</p>
+            </div>
+            <div class="card">
+                <p class="title">Among Top 50 in NSTC, 2017</p>
+                <p class="organization">National Science Talent Contest</p>
+                <p class="description">Participated in National Science Talent Contest by STEM career program and qualified for NPTC.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="full-screen">
+        <h1 class="heading">Projects</h1>
+        <div class="container">
+            <div class="card">
+                <p class="title">Human counter in video using TensorFlow and Python</p>
+                <p class="semester">5th Semester</p>
+            </div>
+            <div class="card">
+                <p class="title">Android App for generating Cellular Data Heat-Map</p>
+                <p class="semester">3th Semester</p>
+            </div>
+            <div class="card">
+                <p class="title">Android App for Encrypting/Decrypting SMS Messages</p>
+                <p class="semester">2th Semester</p>
+            </div>
+            <div class="card">
+                <p class="title">Physics Based Space-Lander Game in C++</p>
+                <p class="semester">1th Semester</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="full-screen">
+        <h1 class="heading">Skills</h1>
+        <div class="container">
+            <div class="card">
+                <p class="title">Programming</p>
+                <ul>
+                    <li>Python<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>Java<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>C++<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>C<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <p class="title">Android App Development</p>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star_border</i>
+            </div>
+            <div class="card">
+                <p class="title">Website Development</p>
+                <ul>
+                    <li>Html5<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                    </li>
+                    <li>CSS3<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>JavaScript<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>JQuery<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>PHP<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <p class="title">Databases</p>
+                <ul>
+                    <li>Oracle<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>MySQL<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                    <li>SQLite3<br>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star</i>
+                        <i class="material-icons">star_half</i>
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">star_border</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="full-screen">
+        <h1 class="heading">Languages</h1>
         <ul>
-            <li>
-                <h1>Degree: Bachelors In Computer & Information Sciences</h1>
-                <h1>Institution: Pakistan Institute of Engineering & Applied Sciences, Islamabad</h1>
-                <h1>From Year: September, 2017</h1>
-                <h1>To Year: June, 2021</h1>
+            <li>Urdu (Mother Tongue)<br>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
             </li>
-            <li>
-                <h1>Degree: Intermediate</h1>
-                <h1>Institution: Punjab College of Science, G.T. Road, Gujranwala</h1>
-                <h1>From Year: September, 2015</h1>
-                <h1>To Year: June, 2017</h1>
-            </li>
-            <li>
-                <h1>Degree: Matriculation</h1>
-                <h1>Institution: St. Josephs' English High School, Sialkot Road, Gujranwala</h1>
-                <h1>From Year: September, 2013</h1>
-                <h1>To Year: June, 2015</h1>
+            <li>English<br>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star_border</i>
             </li>
         </ul>
     </section>
 
-    <section id="achievements" class="full-screen slide" slide_no='2'>Achievements</section>
-
-    <section id="skills" class="full-screen slide" slide_no='3'>Skills</section>
-
-    <section id="courses" class="full-screen slide" slide_no='4'>Courses</section>
 </body>
 
 </html>

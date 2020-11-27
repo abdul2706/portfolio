@@ -5,19 +5,40 @@
     font-family: 'Montserrat-Regular';
 }
 
+hr {
+    width: 50%;
+    margin: auto;
+    border: none;
+    border-top: 10px dotted #7777ff;
+    margin: 64px auto;
+}
+
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
     color: blue;
 }
 
-.full-screen {
-    min-height: 100vh;
-    padding: 16px;
-    background: white;
+.heading {
+    font-size: 2.75rem;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 16px 0px;
 }
 
-.slide {
-    position: relative;
+img {
+    width: 128px;
+}
+
+.full-screen {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    /* border: 1px solid black; */
 }
 
 #basic-information {
@@ -27,6 +48,8 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+    margin: 0px;
+    padding: 0px;
 }
 
 #basic-information .half {
@@ -34,26 +57,20 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#basic-information .image-area {
-    margin-right: 16px;
-    justify-content: flex-end;
+    min-height: 50vh;
 }
 
 .image-area img {
-    /* flex: 1 1; */
-    /* max-width: 512px; */
-    /* height: auto; */
     width: 100%;
-    min-width: 300px;
-    max-width: 400px;
+    /* min-width: 300px; */
+    /* max-width: 400px; */
 }
 
 #basic-information .information-area {
+    padding: 8px;
     flex: 1 1;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .information-area .details-area {
@@ -61,17 +78,11 @@ a {
 }
 
 .details-area .name {
-    font-size: 3rem;
+    font-size: 1.75rem;
 }
 
 .details-area .degree {
-    font-size: 2rem;
-}
-
-.information-area .contact-area p {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
 }
 
 .contact-area .info-row {
@@ -79,40 +90,71 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
+    margin: 4px 0px;
+}
+
+.contact-area .info-row a {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 0px;
 }
 
 .info-row .icon {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     margin-right: 8px;
 }
 
-@media (max-width: 800px) {
-    #basic-information {
-        flex-direction: column;
-    }
-    #basic-information .image-area {
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container .card {
+    width: 100%;
+    min-height: 50vh;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #ddddff, #ffffee);
+}
+
+.card .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .logo img {
+    width: 50%;
+}
+
+.special1 {
+    font-weight: lighter;
+    color: blue;
+}
+
+.special2 {
+    font-weight: bold;
+    color: green;
+}
+
+@media (min-width: 600px) {
+    #basic-information .half {
+        flex: 1 1 50%;
+        display: flex;
         justify-content: center;
-        margin: 0px;
-    }
-    #basic-information .information-area {
-        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
     }
     .image-area img {
-        width: 200px;
-    }
-    .information-area .details-area {
-        margin-bottom: 16px;
-    }
-    .details-area .name {
-        font-size: 2rem;
-    }
-    .details-area .degree {
-        font-size: 1.5rem;
-    }
-    .information-area .contact-area p {
-        font-size: 1rem;
-        margin-bottom: 0px;
+        width: 25%;
+        border: 1px solid red;
     }
 }

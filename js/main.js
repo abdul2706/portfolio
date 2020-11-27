@@ -1,46 +1,39 @@
 var TAG = '[main]';
 var clog = console.log;
-var prevScroll = 0,
-    nextScroll = 0,
-    windowHeight = 0;
+var prevScroll = 0;
+var nextScroll = 0;
+var windowHeight = 0;
+var slide_no = 0;
+var total_sections = 0;
 
 $(function() {
     clog(TAG + '[starts]');
+    total_sections = $('section.slide').length;
+    clog(total_sections);
     windowHeight = window.innerHeight;
     clog(TAG + windowHeight);
-    $(window).on('scroll', function() {
-        nextScroll = window.scrollY;
-        var slide_sections = $('section.slide');
-        clog('[window][scroll] nextScroll -> ' + nextScroll);
-        for (let section of slide_sections) {
-            var section_top = $(section).attr('slide_no') * windowHeight;
-            clog(section_top + "; " + $(section).css('top'));
-            if (nextScroll > section_top) {
-                clog(section_top);
-                $(section).css('top', nextScroll);
-            }
-        }
+    // $(window).on('scroll', function() {
+    //     clog('[window.scroll][starts]');
+    //     nextScroll = window.scrollY;
 
-        // if (nextScroll - prevScroll >= 0) {
-        //     clog('scroll down');
-        //     for (let section of slide_sections) {
-        //         var section_top = $(section).attr('slide_no') * windowHeight;
-        //         if (nextScroll > section_top) {
-        //             clog(section_top);
-        //             $(section).css('top', nextScroll);
-        //         }
-        //     }
-        // } else {
-        //     clog('scroll up');
-        //     for (let section of slide_sections) {
-        //         var section_top = $(section).attr('slide_no') * windowHeight;
-        //         if (nextScroll > section_top) {
-        //             clog(section_top);
-        //             $(section).css('top', nextScroll);
-        //         }
-        //     }
-        // }
-        prevScroll = nextScroll;
-    });
+    //     for (var i = 0; i < total_sections; i++) {
+    //         if (nextScroll >= i * windowHeight && nextScroll < (i + 1) * windowHeight) {
+    //             slide_no = i;
+    //         }
+    //     }
+
+    //     clog(nextScroll + '; ' + slide_no);
+
+    //     for (var i = 0; i < total_sections; i++) {
+    //         if (i <= slide_no) {
+    //             $('section[slide_no=' + i + ']').css('top', nextScroll);
+    //         }
+    //         //  else {
+    //         //     $('section[slide_no=' + i + ']').removeClass('fixed-slide');
+    //         // }
+    //     }
+    //     prevScroll = nextScroll;
+    //     clog('[window.scroll][ends]');
+    // });
     clog(TAG + '[ends]');
 });
