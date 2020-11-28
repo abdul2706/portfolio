@@ -216,11 +216,16 @@ li {
     width: 256px;
     height: 256px;
     position: absolute;
-    top: 300px;
-    left: 70%;
-    transform: translate(-50%, 0%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.25;
+}
+
+.container-full-width .slider .slider-item .information {
+    position: relative;
+    z-index: 1;
 }
 
 .container-full-width .slider .current-item {
@@ -233,7 +238,6 @@ li {
     box-shadow: 4px 8px 16px 2px #00000077;
     background-color: white;
     overflow: hidden;
-    opacity: 2;
 }
 
 #skills .card {
@@ -286,21 +290,10 @@ li {
     .container-full-width .slider {
         min-height: 50vh;
     }
-    .container-full-width .slider .slider-item .logo {
-        top: 400px;
-        left: 60%;
-        transform: translate(-50%, 0%);
-    }
     .container-full-screen .links-info .icon {
         width: 48px;
         height: 48px;
         margin: 16px;
-    }
-    #education.container-full-width {
-        min-height: 75vh;
-    }
-    #education.container-full-width .slider {
-        min-height: 75vh;
     }
 }
 
@@ -308,27 +301,17 @@ li {
     .container-full-width {
         flex-direction: column;
     }
-
     .container-full-width.flex-reverse {
         flex-direction: column;
     }
-
     .container-full-width .container-left {
         padding-top: 48px;
         padding-bottom: 0px;
     }
-
-    .container-full-width .slider .slider-item .logo {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-
     .container-full-width .slider .card {
         padding: 64px;
     }
 }
-
 
 @media (max-width: 500px) {
     .container-full-width {
@@ -337,25 +320,17 @@ li {
     .container-full-width .slider {
         min-height: 100vh;
     }
-    #education.container-full-width {
-        min-height: 100vh;
-    }
-    #education.container-full-width .slider {
-        min-height: 100vh;
-    }
     .heading {
         font-size: 2rem;
     }
     .para-style-1 {
-        margin-top: 16px;
         font-size: 0.75rem;
-        font-weight: bolder;
-        color: #777777;
     }
     .para-style-2 {
         font-size: 1rem;
-        color: #333333;
-        text-align: justify;
+    }
+    #skills .para-style-2 {
+        font-size: 1.5rem;
     }
     .container-full-screen .container-info .main-info h1 {
         font-size: 3.5rem;
@@ -363,11 +338,6 @@ li {
     }
     .container-full-screen .container-info .main-info h3 {
         font-size: 1rem;
-    }
-    .container-full-screen .links-info .icon {
-        width: 48px;
-        height: 48px;
-        margin: 16px;
     }
     .tooltip .tooltiptext {
         font-size: 0.5rem;
@@ -388,13 +358,6 @@ li {
     .container-full-width .slider {
         padding: 32px;
     }
-    .container-full-width .slider .slider-item .logo {
-        width: 196px;
-        height: 196px;
-        top: 350px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
     .container-full-width .slider .card {
         padding: 32px;
     }
@@ -406,8 +369,5 @@ li {
     }
     .container-full-width .slider .button-right {
         right: 8px;
-    }
-    #skills .para-style-2 {
-        font-size: 1.5rem;
     }
 }
