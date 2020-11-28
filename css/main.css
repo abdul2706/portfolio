@@ -220,6 +220,7 @@ li {
     left: 70%;
     transform: translate(-50%, 0%);
     z-index: 0;
+    opacity: 0.5;
 }
 
 .container-full-width .slider .current-item {
@@ -232,6 +233,7 @@ li {
     box-shadow: 4px 8px 16px 2px #00000077;
     background-color: white;
     overflow: hidden;
+    opacity: 2;
 }
 
 #skills .card {
@@ -294,6 +296,12 @@ li {
         height: 48px;
         margin: 16px;
     }
+    #education.container-full-width {
+        min-height: 75vh;
+    }
+    #education.container-full-width .slider {
+        min-height: 75vh;
+    }
 }
 
 @media (max-width: 800px) {
@@ -323,6 +331,18 @@ li {
 
 
 @media (max-width: 500px) {
+    .container-full-width {
+        min-height: 100vh;
+    }
+    .container-full-width .slider {
+        min-height: 100vh;
+    }
+    #education.container-full-width {
+        min-height: 100vh;
+    }
+    #education.container-full-width .slider {
+        min-height: 100vh;
+    }
     .heading {
         font-size: 2rem;
     }
