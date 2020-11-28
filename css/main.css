@@ -86,12 +86,13 @@ li {
 
 .container-full-screen {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #282a36;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px;
 }
 
 .container-full-screen .container-info {
@@ -150,23 +151,11 @@ li {
     padding: 8px;
     position: absolute;
     z-index: 1;
-    top: 75%;
-    left: 0%;
-    margin-left: -100px;
+    top: 80%;
+    left: -50%;
     font-size: 0.75rem;
     letter-spacing: 2px;
 }
-
-/* .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-} */
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
@@ -174,9 +163,14 @@ li {
 
 .container-full-width {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.container-full-width.flex-reverse {
+    flex-direction: row-reverse;
 }
 
 .container-full-width .container-left {
@@ -184,6 +178,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px;
 }
 
 .container-full-width .container-right {
@@ -192,7 +187,7 @@ li {
 
 .container-full-width .slider {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -272,4 +267,68 @@ li {
 
 #skills li:hover {
     color: red;
+}
+
+@media (max-width: 500px) {
+    .heading {
+        font-size: 2rem;
+    }
+    .para-style-1 {
+        margin-top: 16px;
+        font-size: 0.75rem;
+        font-weight: bolder;
+        color: #777777;
+    }
+    .para-style-2 {
+        font-size: 1rem;
+        color: #333333;
+        text-align: justify;
+    }
+    .container-full-screen .container-info .main-info h1 {
+        font-size: 3.5rem;
+        margin-bottom: 8px;
+    }
+    .container-full-screen .container-info .main-info h3 {
+        font-size: 1rem;
+    }
+    .container-full-screen .links-info .icon {
+        width: 48px;
+        height: 48px;
+        margin: 16px;
+    }
+    .tooltip .tooltiptext {
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+        left: -70%;
+        top: 90%;
+    }
+    .container-full-width .container-left {
+        padding-top: 48px;
+        padding-bottom: 0px;
+    }
+    .container-full-width .slider {
+        padding: 32px;
+    }
+    .container-full-width .slider .slider-item .logo {
+        width: 196px;
+        height: 196px;
+        top: 350px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    .container-full-width .slider .card {
+        padding: 32px;
+    }
+    #skills .card {
+        padding: 50px;
+    }
+    .container-full-width .slider .button-left {
+        left: 8px;
+    }
+    .container-full-width .slider .button-right {
+        right: 8px;
+    }
+    #skills .para-style-2 {
+        font-size: 1.5rem;
+    }
 }
