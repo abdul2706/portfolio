@@ -23,6 +23,10 @@ a:hover {
     color: blue;
 }
 
+a.underline-link {
+    text-decoration: underline;
+}
+
 img {
     width: 128px;
     height: 128px;
@@ -53,6 +57,10 @@ li {
     font-size: 1.5rem;
     color: #333333;
     text-align: justify;
+}
+
+.para-style-3 {
+    margin: 16px 0;
 }
 
 #education {
